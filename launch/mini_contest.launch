@@ -1,0 +1,7 @@
+<launch>
+    <include file="$(find m2_ps4)/launch/ps4_msg.launch">
+        <arg name = "joy" default = "/dev/ds5alpha"/>
+    </include>
+    <node name="ps4_controller" pkg="mini_contest" type="translate.py"/>
+    <node name="serial_node" pkg="rosserial_python" type="serial_node.py"/>
+</launch>
